@@ -1,15 +1,19 @@
 package com.example.javafx_03;
 
 import gui.util.Alerts;
+import gui.util.Constraints;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.net.URL;
 import java.util.Locale;
+import java.util.ResourceBundle;
 
-public class HelloController {
+public class HelloController implements Initializable {
     @FXML
     private TextField txtNumber1;
     @FXML
@@ -18,9 +22,6 @@ public class HelloController {
     private Label labelResult;
     @FXML
     private Button btSum;
-
-    @FXML
-    private Label welcomeText;
 
     @FXML
     public void onBtSumAction(){
@@ -38,14 +39,12 @@ public class HelloController {
     }
 
 
+    @Override
+    public void initialize(URL url, ResourceBundle resource) {
+        Constraints.setTextFieldDouble(txtNumber1);
+        Constraints.setTextFieldDouble(txtNumber2);
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Bem vindo a aplicação de layouts Java!");
-
-        Alerts.showAlert("Alert Title", "Alert header", "Oieeee", Alert.AlertType.INFORMATION);
-
+        Constraints.setTextFieldMaxLength(txtNumber1,15);
+        Constraints.setTextFieldMaxLength(txtNumber2, 15);
     }
-
-
 }
