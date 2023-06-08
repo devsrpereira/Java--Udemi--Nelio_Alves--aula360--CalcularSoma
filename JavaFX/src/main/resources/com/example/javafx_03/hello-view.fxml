@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane cacheShape="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="259.0" prefWidth="217.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_03.HelloController">
+   <children>
+      <Label layoutX="34.0" layoutY="34.0" text="Calcule a soma">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNumber1" layoutX="37.0" layoutY="85.0" promptText="Primeiro Número" />
+      <TextField fx:id="txtNumber2" layoutX="37.0" layoutY="123.0" promptText="Segundo Número" />
+      <Button fx:id="btSum" layoutX="85.0" layoutY="174.0" mnemonicParsing="false" onAction="#onBtSumAction" text="Somar" />
+      <Label layoutX="20.0" layoutY="222.0" text="Resultado:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelResult" layoutX="93.0" layoutY="222.0" text="99">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
